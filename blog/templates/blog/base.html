@@ -6,6 +6,11 @@
   <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
+  {% if user.is_authenticated %}
+  <div>
+    <a href="{% url 'post_new' %}">+++</a>
+  </div>
+  {% endif %}
   <div>
     <h1>My Posts</h1>
   </div>
